@@ -18,6 +18,11 @@ public class AdminPage {
 	@FindBy(xpath="//ul[@class=\"oxd-dropdown-menu\"]/li")
 	public List<WebElement> subMenuBar;
 	
+	@FindBy(xpath="//h6[text()='Admin']")
+	public WebElement adminPageTitle;
+
+
+	
 	
 
 }
