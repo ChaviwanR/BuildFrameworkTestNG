@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.github.javafaker.Faker;
+
 public class CommonMethods extends PageInitializer {
 
 	public static void sendText(WebElement element, String text) {
@@ -51,8 +53,17 @@ public class CommonMethods extends PageInitializer {
 
 	public static void ClickOnNavigationBar(List<WebElement> listofitem, String TopMenuName) {
 		List<WebElement> listItem = listofitem;
-		for (WebElement top : listItem) {
+		for (WebElement top : listItem) {	
 			if (top.getText().contains(TopMenuName)) {
+				top.click();
+				break;
+			}
+		}
+	}
+	public static void ClickOnNavigationBarGetAttribute(List<WebElement> listofitem, String TopMenuName, String AttributeName) {
+		List<WebElement> listItem = listofitem;
+		for (WebElement top : listItem) {	
+			if (top.getAttribute(AttributeName).contains(TopMenuName)) {
 				top.click();
 				break;
 			}
@@ -258,5 +269,28 @@ public class CommonMethods extends PageInitializer {
 		}
 
 	}
+	
+	public static String createRandom(String keyword) {
+		Faker faker = new Faker();
+		String output="";
+		switch(keyword) {
+		case ("firstname"):
+			output = faker.name().firstName();
+			break;
+		case ("lastname"):
+			output = faker.name().lastName();
+			break;
+		case ("email"):
+			output = faker.internet().emailAddress();
+			break;
+		case ("telephone"):
+			output = faker.phoneNumber().toString();
+		case ("password"):
+			output = faker.internet().password();
+			break;
+		}
+		return output;
+	}
+	
 
 }// end of the class

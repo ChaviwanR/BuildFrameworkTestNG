@@ -21,5 +21,14 @@ public class LoginPage {
 	@FindBy(xpath="//button")
 	public WebElement button;
 	
-
+	@FindBy(xpath="//form[@class='oxd-form']/div[1]//span")
+	public WebElement userRequired;
+	
+	@FindBy(xpath="//form[@class='oxd-form']/div[2]//span")
+	public WebElement pwdRequired;
+	
+	@FindBy(xpath="//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
+	public WebElement warningTxt;
+	
+	
 }

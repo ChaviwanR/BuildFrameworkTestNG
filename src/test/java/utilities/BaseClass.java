@@ -1,19 +1,18 @@
 package utilities;
 
 import java.io.FileInputStream;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObject.DashboardPage;
@@ -22,12 +21,14 @@ import pageObject.LoginPage;
 public class BaseClass {
 	private static WebDriver driver;
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeTest
 	public static WebDriver getDriver() {
 		if (driver == null) {
 			switch (BaseClass.getProperty("browser")) {
 			case ("chrome"):
 				WebDriverManager.chromedriver().setup();
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--incognito");
 				driver = new ChromeDriver();
 				break;
 			case ("firefox"):
@@ -56,8 +57,10 @@ public class BaseClass {
 	LoginPage lp = new LoginPage();
 	DashboardPage dp = new DashboardPage();
 
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass
 	public void login() {
+	
+		getDriver();
 		lp.username.sendKeys(BaseClass.getProperty("userName"));
 		lp.password.sendKeys(BaseClass.getProperty("password"));
 		lp.button.click();
