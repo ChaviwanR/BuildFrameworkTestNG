@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-04T14:25:13 MST" name="Default suite" finished-at="2024-11-04T14:25:15 MST" duration-ms="2170">
+  <suite started-at="2024-11-04T19:41:08 MST" name="Default suite" finished-at="2024-11-04T19:41:14 MST" duration-ms="5984">
     <groups>
     </groups>
-    <test started-at="2024-11-04T14:25:13 MST" name="Default test" finished-at="2024-11-04T14:25:15 MST" duration-ms="2170">
-      <class name="teseCases.TC_Dashboard_011">
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:teseCases.TC_Dashboard_011@383f1975]" started-at="2024-11-04T14:25:13 MST" name="getDriver" finished-at="2024-11-04T14:25:13 MST" duration-ms="7" status="PASS">
+    <test started-at="2024-11-04T19:41:08 MST" name="Default test" finished-at="2024-11-04T19:41:14 MST" duration-ms="5984">
+      <class name="teseCases.TC_Dashboard_21">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:teseCases.TC_Dashboard_21@42d174ad]" started-at="2024-11-04T19:41:08 MST" name="getDriver" finished-at="2024-11-04T19:41:08 MST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method is-config="true" signature="login()[pri:0, instance:teseCases.TC_Dashboard_011@383f1975]" started-at="2024-11-04T14:25:13 MST" name="login" finished-at="2024-11-04T14:25:14 MST" duration-ms="1284" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:teseCases.TC_Dashboard_21@42d174ad]" started-at="2024-11-04T19:41:08 MST" name="login" finished-at="2024-11-04T19:41:13 MST" duration-ms="4099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="verifyLeftMenu_Time()[pri:0, instance:teseCases.TC_Dashboard_011@383f1975]" started-at="2024-11-04T14:25:14 MST" name="verifyLeftMenu_Time" finished-at="2024-11-04T14:25:15 MST" duration-ms="853" status="PASS">
+        <test-method signature="verifyLeftMenu_Buzz()[pri:0, instance:teseCases.TC_Dashboard_21@42d174ad]" started-at="2024-11-04T19:41:13 MST" name="verifyLeftMenu_Buzz" finished-at="2024-11-04T19:41:14 MST" duration-ms="1792" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLeftMenu_Time -->
-      </class> <!-- teseCases.TC_Dashboard_011 -->
+        </test-method> <!-- verifyLeftMenu_Buzz -->
+      </class> <!-- teseCases.TC_Dashboard_21 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
