@@ -10,9 +10,9 @@ import utilities.CommonMethods;
 public class TC_Dashboard_012 extends CommonMethods {
 
 	@Test
-	public void verifyLeftMenu_Time() {
-		CommonMethods.ClickOnNavigationBar(dp.leftMenu, BaseClass.getProperty("leftMunu_Time"));
-		Assert.assertEquals(tp.timePageTitle.getText(), BaseClass.getProperty("TimePage_Title"));
+	public void verifyLeftMenu_Recruitment() {
+		CommonMethods.ClickOnNavigationBar(dp.leftMenu, BaseClass.getProperty("leftMunu_Recruitment"));
+		Assert.assertEquals(rp.recruitmentPageTitle.getText(), BaseClass.getProperty("RecruitmentPage_Title"));
 		
 	}
 

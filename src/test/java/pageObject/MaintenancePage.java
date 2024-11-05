@@ -29,4 +29,8 @@ public class MaintenancePage {
 	@FindBy(xpath="//button[@type='button']")
 	public WebElement cancelBtn;
 	
+	@FindBy(xpath="//p[text()='Invalid credentials']")
+	public WebElement warnningMsg;
+	
+	
 }
